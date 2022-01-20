@@ -1,7 +1,7 @@
 'use strict'
 
 const { createResponse, getAllResponse } = require("../repositories/response-repo");
-const { errorResponseMsg, slackSuccessResponse, helloSchema, hobbiesSc, slackSuccessResponsehema, thanksSchema, succcesResponseMsg } = require("../utils/response")
+const { errorResponseMsg, slackSuccessResponse, helloSchema, thanksSchema, succcesResponseMsg, hobbiesSchema } = require("../utils/response")
 
 module.exports = {
     sayHello: async (req, res) =>{
