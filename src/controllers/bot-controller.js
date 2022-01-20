@@ -49,7 +49,7 @@ module.exports = {
     getUserResponse: async (req, res) => {
         try {
             const responses = await getAllResponse();
-            return succcesResponseMsg(res, 200, 'Successfully fetched', responses);
+            return succcesResponseMsg(res, 200, 'Successfully fetched responses', responses);
         } catch (err) {
             return errorResponseMsg(res, 500, 'Internal Server Error');
         }
