@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 
-const MONGOLAB_URI = process.env.NODE_ENV == 'test' ? process.env.MONGOLAB_URI_TEST : process.env.MONGOLAB_URI_DEV;
+const MONGOLAB_URI = process.env.NODE_ENV === 'test'
+  ? process.env.MONGOLAB_URI_TEST
+  : process.env.MONGOLAB_URI;
 
 module.exports = {
   connect: () => {
@@ -8,7 +10,7 @@ module.exports = {
     mongoose
       .connect(MONGOLAB_URI, {
         useNewUrlParser: true,
-        useUnifiedTopology: true,
+        useUnifiedTopology: true
       })
       .then(() => {
         // eslint-disable-next-line no-console

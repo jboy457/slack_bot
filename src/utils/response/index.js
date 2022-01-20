@@ -14,9 +14,9 @@ module.exports = {
     message,
     data
   }),
-  
+
   slackSuccessResponse: (res, status = 200, data) => res.status(status).json(data),
   helloSchema,
   hobbiesSchema,
-  thanksSchema,
-}
+  thanksSchema
+};
