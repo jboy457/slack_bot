@@ -1,13 +1,13 @@
 'use strict'
 
-const { createResponse } = require("../repositories/response-repo");
-const { errorResponseMsg, successResponseMsg, helloSchema, hobbiesSchema, thanksSchema } = require("../utils/response")
+const { createResponse, getAllResponse } = require("../repositories/response-repo");
+const { errorResponseMsg, slackSuccessResponse, helloSchema, hobbiesSc, slackSuccessResponsehema, thanksSchema, succcesResponseMsg } = require("../utils/response")
 
 module.exports = {
     sayHello: async (req, res) =>{
         try{
             const hello = helloSchema;
-            return successResponseMsg(res, 200, hello);
+            return slackSuccessResponse(res, 200, hello);
         } catch (err) {
             console.log(err);
             return errorResponseMsg(res, 500, 'Internal server error');
@@ -39,9 +39,18 @@ module.exports = {
            }
 
             await createResponse(userResponse);
-            return successResponseMsg(res, 200, response);
+            return slackSuccessResponse(res, 200, response);
         } catch (err) {
             console.log(err);
+            return errorResponseMsg(res, 500, 'Internal Server Error');
+        }
+    },
+
+    getUserResponse: async (req, res) => {
+        try {
+            const responses = await getAllResponse();
+            return succcesResponseMsg(res, 200, 'Successfully fetched', responses);
+        } catch (err) {
             return errorResponseMsg(res, 500, 'Internal Server Error');
         }
     },
