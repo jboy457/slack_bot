@@ -1,0 +1,33 @@
+{
+    "response_type": "in_channel",
+    "text": "Welcome. How are you doing?",
+    "attachments": [
+        {
+            "fallback": "If you could read this message, you'd be choosing something fun to do right now.",
+            "color": "#3AA3E3",
+            "attachment_type": "default",
+            "callback_id": "doing_response",
+            "actions": [
+                {
+                    "name": "doing_list",
+                    "text": "Select how you're doing . . .",
+                    "type": "select",
+                    "options": [
+                        {
+                            "text": "Doing Well",
+                            "value": "doing_well"
+                        },
+                        {
+                            "text": "Neutral",
+                            "value": "neutral"
+                        },
+                        {
+                            "text": "Feeling lucky",
+                            "value": "feeling_lucky"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

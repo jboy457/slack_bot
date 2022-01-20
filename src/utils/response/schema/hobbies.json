@@ -1,0 +1,61 @@
+{
+    "text": "Hobbies",
+    "response_type": "in_channel",   
+	"blocks": [
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "What are your favorite hobbies?"
+			},
+			"accessory": {
+				"type": "multi_static_select",
+				"placeholder": {
+					"type": "plain_text",
+					"text": "Select an Hobby"
+				},
+				"options": [
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "Football"
+
+						},
+						"value": "football"
+					},
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "Music"
+
+						},
+						"value": "music"
+					},
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "Sleep"
+
+						},
+						"value": "sleep"
+					},
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "Movies"
+
+						},
+						"value": "movies"
+					},
+					{
+						"text": {
+							"type": "plain_text",
+							"text": "Basketball"
+						},
+						"value": "basketball"
+					}
+				]
+			}
+		}
+	]
+}
