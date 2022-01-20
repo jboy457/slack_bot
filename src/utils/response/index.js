@@ -8,8 +8,14 @@ module.exports = {
     message,
     data
   }),
+
+  succcesResponseMsg: (res, status = 200, message, data) => res.status(status).json({
+    status: 'success',
+    message,
+    data
+  }),
   
-  successResponseMsg: (res, status = 200, data) => res.status(status).json(data),
+  slackSuccessResponse: (res, status = 200, data) => res.status(status).json(data),
   helloSchema,
   hobbiesSchema,
   thanksSchema,
