@@ -1,6 +1,6 @@
 # slack_bot
 
-Start Application
+Start Bot
 ```
 npm run dev
 ```
